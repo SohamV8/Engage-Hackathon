@@ -136,9 +136,6 @@ body {
     text-decoration: none;
 }
 
-
-
-/* ------------------------Countdown----------------------- */
 .wrap {
     position: absolute;
     bottom: 0;
@@ -283,6 +280,3 @@ body {
     right: 0;
     margin: auto;
 }
-
-  
-/* ------------------------Countdown----------------------- */
