@@ -4,7 +4,7 @@ import './Header.css'
 function Header() {
   return (
     <header className="header">
-      <a href="index.html" className="logo">
+      <a href="App.jsx" className="logo">
         <img src="" alt="logo" />
       </a>
 

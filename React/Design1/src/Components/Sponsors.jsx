@@ -3,7 +3,7 @@ import './Sponsors.css'
 
 function Sponsors() {
   return (
-    <div>
+    <div id='Sponsors'>
       <h1 className="">Sponsors</h1>
       <div className="sponsorship">
         <h1 className="">Gold Sponsors</h1>

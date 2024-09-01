@@ -3,7 +3,7 @@ import './Tracks.css'
 
 function Tracks() {
   return (
-    <div>
+    <div id='Tracks'>
       <h1>Development Tracks</h1>
       <div className="images">
         <div className="tracks">

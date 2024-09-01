@@ -4,13 +4,16 @@ import Footer from './Components/Footer';
 import Sponsors from './Components/Sponsors';
 import Tracks from './Components/Tracks';
 import About from './Components/About';
-import './App.css'; // Assuming you have global styles here
+import './App.css'; 
+import FAQ from './Components/FAQ';
+import Home from './Components/Home';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <main>
+        <Home />
         <section id="about">
           <About />
         </section>
@@ -21,7 +24,7 @@ function App() {
           <Sponsors />
         </section>
         <section id="FAQ">
-          {/* FAQ section content can be added here */}
+          <FAQ />
         </section>
       </main>
       <Footer />
