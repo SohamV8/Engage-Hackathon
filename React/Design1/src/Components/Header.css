@@ -4,18 +4,41 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: relative; /* Fixed header on top */
+    top: 0;
     left: 0;
-    margin: 0;
     right: 0;
-    top: 1px;
+    z-index: 1000; /* Ensure the header stays on top */
 }
 
-.header .logo img {
+.header .logo img, 
+.header .logo svg {
     height: 50px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+}
+
+.header .logo:hover img, 
+.header .logo:hover svg {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Navbar settings */
 .navbar {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+}
+
+.navbar a {
+    font-size: 18px; /* Adjust font size for a balanced look */
+    text-decoration: none;
+    color: #333; /* Darker color for better contrast */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition effects */
+}
+
+.navbar a:hover {
+    color: #ff6600; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
 }

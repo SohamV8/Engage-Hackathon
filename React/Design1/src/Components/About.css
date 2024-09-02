@@ -1,23 +1,46 @@
-#about{
+#about {
     height: 100vh;
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-
+    padding: 40px;
 }
 
-/* About section specifics */
+/* Logo container styling */
+.logo-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* Styling for each logo image */
 #about img {
-    width: 100px;
+    width: 150px;
     height: auto;
-    margin: 10px;
+    margin: 0 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
+#about img:hover {
+    transform: scale(1.1);
+}
+
+/* Paragraph styling */
 .about-p {
-    text-align: center;
-    margin-top: 20px;
-    border-left: 2px solid #000;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    border-left: 5px solid #000;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }

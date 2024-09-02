@@ -1,11 +1,13 @@
 import React from 'react';
-import './Header.css'
+import './Header.css';
+import ehlogo from '../assets/ehlogo.svg'; // Correct import syntax
+import MOM_LOGO from '../assets/MOM_LOGO.png'; // Correct import syntax
 
 function Header() {
   return (
     <header className="header">
       <a href="App.jsx" className="logo">
-        <img src="" alt="logo" />
+        <img src={ehlogo} alt="logo" /> {/* Use img tag for SVG files */}
       </a>
 
       <nav className="navbar">
@@ -16,7 +18,7 @@ function Header() {
       </nav>
 
       <a href="https://momentum.ncuindia.edu/" target="_blank" rel="noopener noreferrer" className="logo">
-        <img src="" alt="momentum" />
+        <img src={MOM_LOGO} alt="momentum" />
       </a>
     </header>
   );
