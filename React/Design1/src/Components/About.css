@@ -17,6 +17,7 @@
     margin-bottom: 20px;
     flex-wrap: wrap;
     align-content: center;
+    position: absolute;
 }
 
 /* Styling for each logo image */
@@ -36,11 +37,12 @@
     max-width: 800px;
     text-align: left;
     padding: 20px;
-    border-left: 5px solid #000;
+    border-left: 5px solid #ffffff;
     font-size: 20px;
     line-height: 1.6;
-    color: #333;
+    color: #ffffff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    position: absolute;
 }

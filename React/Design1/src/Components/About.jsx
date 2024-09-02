@@ -1,13 +1,14 @@
 import React from 'react';
 import './About.css';
-import img11 from '../assets/img11.png'; // Correct import syntax
+import whitencu from '../assets/whitencu.png'; // Correct import syntax
 import MOM_LOGO from '../assets/MOM_LOGO.png'; // Correct import syntax
+import StarfieldBackground from './StarfieldBackground';
 
 function About() {
   return (
     <div id="about">
       <div className="logo-about">
-        <img src={img11} alt="Engage Hackathon Logo" />
+        <img src={whitencu} alt="Engage Hackathon Logo" />
         <img src={MOM_LOGO} alt="Momentum Logo" />
       </div>
       <p className="about-p">

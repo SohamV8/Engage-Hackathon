@@ -4,7 +4,7 @@ import './Tracks.css'
 function Tracks() {
   return (
     <div id='Tracks'>
-      <h1>Development Tracks</h1>
+      <h1 className='track-main'>Development Tracks</h1>
       <div className="images">
         <div className="tracks">
           <img src="" alt="images" />

@@ -7,10 +7,12 @@ import About from './Components/About';
 import './App.css'; 
 import FAQ from './Components/FAQ';
 import Home from './Components/Home';
+import StarfieldBackground from './Components/StarfieldBackground'; // Ensure correct import
 
 function App() {
   return (
     <div className="App">
+      <StarfieldBackground />
       <Header />
       <main>
         <Home />

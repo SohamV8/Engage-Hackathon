@@ -1,10 +1,12 @@
-*{
+/* App.css */
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html, body, #root {
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
@@ -12,12 +14,15 @@ html{
   overflow-x: hidden;
 }
 
+body {
+  background-color: #000000; /* Ensure body background is black */
+}
 
-body{
-  background-color:  #b9b9b9;
-  height: 100%;
-  width: 100%;
-  scroll-behavior: smooth;
-  position: relative;
-  overflow-x: hidden;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1; /* Ensure the canvas is in the background */
+  background-color: #000000; /* Ensure canvas background is black */
 }
