@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
-    color: #0f0;
+    color: #1F51FF;
     overflow: hidden;
     height: 100vh;
     overflow: hidden;
@@ -19,7 +19,7 @@
 h1.main-title {
     font-size: 4em;
     text-align: center;
-    text-shadow: 0 0 20px #0f0;
+    text-shadow: 0 0 20px #1F51FF;
     z-index: 1;
     margin: 0;
 }
@@ -27,7 +27,7 @@ h1.main-title {
 .tagline {
     font-size: 1.8em;
     text-align: center;
-    text-shadow: 0 0 10px #0f0;
+    text-shadow: 0 0 10px #1F51FF;
     z-index: 1;
     margin-top: 20px;
 }

@@ -6,6 +6,7 @@ function Sponsors() {
   return (
     <div id='Sponsors'>
       <AnimatedTitle text="SPONSORS" />
+      <div className="sponsors-flex">
       <div className="sponsorship">
         <AnimatedTitle text="Gold Sponsors" />
         <img src="" alt="Gold Sponsor 1" />
@@ -25,6 +26,7 @@ function Sponsors() {
         <img src="" alt="Community Partner 1" />
         <img src="" alt="Community Partner 2" />
         <img src="" alt="Community Partner 3" />
+      </div>
       </div>
     </div>
   );
