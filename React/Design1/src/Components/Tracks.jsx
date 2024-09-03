@@ -1,10 +1,11 @@
 import React from 'react';
 import './Tracks.css'
+import AnimatedTitle from './AnimatedTitle';
 
 function Tracks() {
   return (
     <div id='Tracks'>
-      <h1 className='track-main'>Development Tracks</h1>
+       <AnimatedTitle text="TRACKS" />
       <div className="images">
         <div className="tracks">
           <img src="" alt="images" />

@@ -10,51 +10,30 @@
   animation: textGlitch 3s ease-in-out infinite alternate;
 }
 
-.animated-title span {
+.animated-title .animated-word {
   display: inline-block;
-  min-width: 1rem;
-}
-
-.animated-title .animate span {
   opacity: 0;
-  transform: translateY(2px);
-  animation: displayLetter 0.5s ease-in-out 0.5s forwards alternate;
-  letter-spacing: 1px;
+  transition: opacity 0.5s ease-in-out, color 0.3s ease-in-out;
 }
 
-.animated-word {
-  opacity: 0;
+.animated-word.animate {
+  opacity: 1;
+  animation: displayWord 1.5s ease-in-out forwards;
 }
 
-@keyframes displayLetter {
+.animated-word:hover {
+  color: blue;
+  text-shadow: 0 0 12px rgb(0, 60, 255);
+}
+
+@keyframes displayWord {
   0% {
-    transform: translateY(2px);
-    color: white;
     opacity: 0;
-  }
-  10% {
-    opacity: 1;
-    color: limegreen;
-  }
-  20% {
-    opacity: 0;
-    color: white;
-    transform: translateY(0px);
-  }
-  50% {
-    opacity: 1;
-    color: darkgreen;
-    transform: translateY(1px);
-  }
-  60% {
-    opacity: 1;
-    color: white;
-    transform: translateY(1px);
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(0);
-    color: white;
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -80,19 +59,4 @@
     opacity: 1;
     transform: translateX(0px);
   }
-}
-
-/* Replay Button Styling */
-.button-replay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: solid 2px white;
-  outline: none;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  background: black;
-  color: white;
 }

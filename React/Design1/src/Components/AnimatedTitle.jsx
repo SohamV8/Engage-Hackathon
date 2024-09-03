@@ -9,40 +9,22 @@ const AnimatedTitle = ({ text }) => {
   useEffect(() => {
     if (!animationContainer.current) return;
 
-    let textData = text;
+    function animateText() {
+      const span = document.createElement('span');
+      span.className = 'animated-word';
+      span.setAttribute('data-text', text);
+      span.innerText = text;
+      animationContainer.current.appendChild(span);
 
-    function splitWords() {
-      const splitedText = textData.split(' ');
-      splitedText.join('& &').split('&').forEach((e) => {
-        const span = document.createElement('span');
-        span.className = 'animated-word';
-        span.setAttribute('data-text', e);
-        animationContainer.current.appendChild(span);
-      });
-      splitLetters();
+      animate(span);
     }
 
-    function splitLetters() {
-      const animatedWords = animationContainer.current.querySelectorAll('.animated-word');
-      animatedWords.forEach((e, i) => {
-        e.getAttribute('data-text').split('').forEach((f, j) => {
-          f = f === ' ' ? '&#32;' : f;
-          const span = document.createElement('span');
-          span.className = 'animated-element';
-          span.setAttribute('aria-hidden', 'true');
-          span.innerHTML = f;
-          e.appendChild(span);
-        });
-        animate(e, i);
-      });
-    }
-
-    function animate(e, i) {
-      e.style.opacity = 1;
-      e.classList.add('animate');
+    function animate(element) {
+      element.style.opacity = 1;
+      element.classList.add('animate');
 
       // Add letter scrambling effect on hover
-      e.onmouseover = event => {
+      element.onmouseover = event => {
         let iteration = 0;
         let interval = setInterval(() => {
           event.target.innerText = event.target.innerText
@@ -54,7 +36,7 @@ const AnimatedTitle = ({ text }) => {
               return letters[Math.floor(Math.random() * 26)];
             })
             .join("");
-          
+
           if (iteration >= event.target.dataset.text.length) {
             clearInterval(interval);
           }
@@ -64,7 +46,7 @@ const AnimatedTitle = ({ text }) => {
       };
     }
 
-    splitWords();
+    animateText();
 
     return () => {
       if (animationContainer.current) {
@@ -73,22 +55,8 @@ const AnimatedTitle = ({ text }) => {
     };
   }, [text]);
 
-  const handleReplay = () => {
-    const animatedWords = animationContainer.current.querySelectorAll('.animated-word');
-    animatedWords.forEach((e, i) => {
-      e.classList.remove('animate');
-      e.style.opacity = 0;
-      setTimeout(() => {
-        animate(e, i);
-      }, 500);
-    });
-  };
-
   return (
-    <>
-      <div className="animated-title" ref={animationContainer} aria-label={text}></div>
-      <button className="button-replay" onClick={handleReplay}>Replay</button>
-    </>
+    <div className="animated-title" ref={animationContainer} aria-label={text}></div>
   );
 };
 
