@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Digital font */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', sans-serif; /* Digital-like font */
+  font-weight: 600;
+  color: #0033ff; /* Bright blue color for the text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for a modern look */
+  width: 100%;
+  text-shadow: 0 0 7px #1F51FF;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.countdown-item {
+  margin: 0 15px;
+}
+
+.countdown-value {
+  display: block;
+  font-size: 5rem; /* Larger font size for the digital effect */
+  margin-bottom: 5px;
+}
+
+.countdown-label {
+  font-size: 1.5rem; /* Slightly larger label font for better readability */
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .countdown-item {
+    margin-bottom: 10px;
+  }
+
+  .countdown-value {
+    font-size: 4rem;
+  }
+
+  .countdown-label {
+    font-size: 1.2rem;
+  }
+}
