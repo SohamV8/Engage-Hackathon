@@ -1,8 +1,7 @@
 import React from 'react';
 import './About.css';
-import whitencu from '../assets/whitencu.png'; // Correct import syntax
-import MOM_LOGO from '../assets/MOM_LOGO.png'; // Correct import syntax
-import StarfieldBackground from './StarfieldBackground';
+import whitencu from '../assets/whitencu.png';
+import MOM_LOGO from '../assets/MOM_LOGO.png';
 
 function About() {
   return (
