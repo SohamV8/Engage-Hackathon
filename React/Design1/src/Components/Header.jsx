@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
-import ehlogo from '../assets/ehlogo.svg'; // Correct import syntax
-import MOM_LOGO from '../assets/MOM_LOGO.png'; // Correct import syntax
+import ehlogo from '../assets/ehlogo.svg';
+import MOM_LOGO from '../assets/MOM_LOGO.png';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
       <a href="App.jsx" className="logo">
-        <img src={ehlogo} alt="logo" /> {/* Use img tag for SVG files */}
+        <img src={ehlogo} alt="logo" />
       </a>
 
-      <nav className="navbar">
+      <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
         <a href="#about">About Us</a>
         <a href="#Tracks">Tracks</a>
         <a href="#Sponsors">Sponsors</a>
@@ -20,6 +26,12 @@ function Header() {
       <a href="https://momentum.ncuindia.edu/" target="_blank" rel="noopener noreferrer" className="logo">
         <img src={MOM_LOGO} alt="momentum" />
       </a>
+
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <span className={isMenuOpen ? 'open' : ''}></span>
+        <span className={isMenuOpen ? 'open' : ''}></span>
+        <span className={isMenuOpen ? 'open' : ''}></span>
+      </div>
     </header>
   );
 }

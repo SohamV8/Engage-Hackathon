@@ -1,5 +1,5 @@
 #Sponsors {
-    height: 120vh;
+    height: 120vh; /* Ensures it uses the full viewport height */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     max-width: 1200px;
 }
 
-.images-sponsors{
+.images-sponsors {
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -62,6 +62,18 @@
     text-align: center;
 }
 
+/* Sponsor Category Colors */
+.gold {
+    color: gold;
+}
+
+.silver {
+    color: silver;
+}
+
+.community {
+    color: #66fcf1; /* Light blue */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

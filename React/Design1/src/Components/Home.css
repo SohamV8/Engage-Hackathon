@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 .section {  
-    padding: 0;
+    padding: 0 20px; /* Add some padding for smaller screens */
     font-family: 'Orbitron', sans-serif;
     color: #1F51FF;
     overflow: hidden;
@@ -12,11 +12,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 60px;
+    gap: 40px; /* Reduce gap for better spacing on smaller screens */
 }
 
 h1.main-title, .tagline {
-    font-size: 5em; /* Adjust size for both elements */
+    font-size: 5em; /* Default size for larger screens */
     text-align: center;
     color: #1F51FF;
     position: relative;
@@ -27,6 +27,45 @@ h1.main-title, .tagline {
 .tagline {
     font-size: 1.8em;
     margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    h1.main-title {
+        font-size: 4em; /* Adjust size for tablets */
+    }
+
+    .tagline {
+        font-size: 1.5em; /* Adjust size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    h1.main-title {
+        font-size: 3em; /* Adjust size for smaller screens */
+    }
+
+    .tagline {
+        font-size: 1.2em; /* Adjust size for smaller screens */
+    }
+    
+    .section {
+        gap: 30px; /* Reduce gap further on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1.main-title {
+        font-size: 2.5em; /* Adjust size for mobile screens */
+    }
+
+    .tagline {
+        font-size: 1em; /* Adjust size for mobile screens */
+    }
+    
+    .section {
+        gap: 20px; /* Reduce gap further for mobile */
+    }
 }
 
 /* Glitch Effect Keyframes */

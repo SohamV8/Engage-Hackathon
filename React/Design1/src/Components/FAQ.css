@@ -4,15 +4,16 @@
 /* FAQ Section */
 #faq {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background: #121212;
     color: #e0e0e0;
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, rgba(28,140,255,0.1), rgba(0,0,0,0.1));
+    padding: 20px;
 }
 
 .faq {
@@ -23,6 +24,7 @@
     max-width: 1200px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
 }
 
 .section-title {
@@ -32,7 +34,7 @@
 
 .section-title h2 {
     margin: 0;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: #ffffff;
     font-weight: 700;
 }
@@ -49,6 +51,7 @@
     align-content: center;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 /* FAQ Section Styling */
@@ -61,6 +64,7 @@
     padding: 20px;
     width: 100%;
     max-width: 500px;
+    margin-bottom: 20px;
 }
 
 /* FAQ Section Title */
@@ -127,4 +131,56 @@
     margin: 15px 0;
     font-size: 16px;
     color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-question {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .toggle-icon {
+        font-size: 18px;
+    }
+
+    .faq-answer p {
+        font-size: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .faq-section {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-question {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .toggle-icon {
+        font-size: 16px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .faq-content {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .faq-section {
+        padding: 15px;
+    }
 }

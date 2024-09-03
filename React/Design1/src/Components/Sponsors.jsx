@@ -56,15 +56,15 @@ function Sponsors() {
         </div>
         </div>
         <div className="sponsorship">
-          <AnimatedTitle text="Community Partners" />
+          <AnimatedTitle text="Community Partners"/>
           <div className="images-sponsors">
-          <a href="$" target="_blank" rel="noopener noreferrer">
+          <a href="https://gdsc.community.dev/institute-of-engineering-management-kolkata-india/" target="_blank" rel="noopener noreferrer">
             <img src={gdsc1} alt="Community Partner 1" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://gdg.community.dev/gdg-gurugram/" target="_blank" rel="noopener noreferrer">
             <img src={gdg} alt="Community Partner 2" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://gdsc.community.dev/netaji-subhas-university-of-technology-delhi-india/" target="_blank" rel="noopener noreferrer">
             <img src={gdscncut} alt="Community Partner 3" />
           </a>
         </div>

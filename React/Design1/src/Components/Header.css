@@ -4,22 +4,25 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: relative; /* Fixed header on top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure the header stays on top */
+    background-color: #000; /* Ensure header has a background */
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
+/* Logo styling */
 .header .logo img, 
 .header .logo svg {
-    height: 50px;
-    transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+    height: 60px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .header .logo:hover img, 
 .header .logo:hover svg {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
 }
 
 /* Navbar settings */
@@ -29,16 +32,69 @@
 }
 
 .navbar a {
-    font-size: 18px; /* Adjust font size for a balanced look */
+    font-size: 18px;
     text-decoration: none;
-    color: #ffffff; /* Darker color for better contrast */
+    color: #ffffff;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition effects */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .navbar a:hover {
-    color: #0048ff; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge the text on hover */
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+    color: #0048ff;
+    transform: scale(1.1);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide the navbar by default on small screens */
+        position: absolute;
+        top: 70px; /* Below the header */
+        right: 20px;
+        flex-direction: column;
+        background-color: #000;
+        padding: 10px;
+        border-radius: 8px;
+        gap: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar.open {
+        display: flex; /* Show the navbar when open */
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .menu-toggle .open:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-toggle .open:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle .open:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide the menu toggle on larger screens */
+    }
 }

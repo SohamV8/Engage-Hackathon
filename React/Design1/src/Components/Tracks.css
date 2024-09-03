@@ -1,20 +1,20 @@
 #Tracks {
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px; /* Adjusted padding for better responsiveness */
+    box-sizing: border-box;
 }
 
 .images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    max-width: 1400px;
-    padding: 20px;
+    gap: 20px; /* Adjusted gap for smaller screens */
+    max-width: 1200px; /* Restrict the max-width to prevent overflow */
+    padding: 10px;
     align-content: center;
     align-items: center;
 }
@@ -24,9 +24,9 @@
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; /* Increased width for larger images */
+    width: 260px; /* Adjusted width for smaller screens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -39,22 +39,54 @@
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
-    transition: transform 0.3s ease; /* Added smooth scaling on hover */
+    transition: transform 0.3s ease;
 }
 
 .tracks:hover img {
-    transform: scale(1.05); /* Slightly scale up the image on hover */
+    transform: scale(1.05);
 }
 
 .tracks h2 {
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Adjusted font size for better readability */
     text-align: center;
-    font-family: 'Orbitron', sans-serif; /* Modern tech font */
+    font-family: 'Orbitron', sans-serif;
     transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
 .tracks:hover h2 {
-    color: #1F51FF; /* Blue neon color on hover */
-    text-shadow: 0 0 10px #1F51FF; /* Neon glow effect */
+    color: #1F51FF;
+    text-shadow: 0 0 10px #1F51FF;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Medium screens */
+@media (min-width: 768px) {
+    .tracks {
+        width: 220px; /* Slightly smaller for tablets */
+    }
+
+    .tracks h2 {
+        font-size: 1.3rem; /* Adjust font size */
+    }
+
+    .images {
+        gap: 25px; /* Adjust gap between items */
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+    .tracks {
+        width: 300px; /* Increase width for larger screens */
+    }
+
+    .tracks h2 {
+        font-size: 1.5rem; /* Larger font size for headings */
+    }
+
+    .images {
+        gap: 30px; /* Increase gap for larger screens */
+    }
 }
