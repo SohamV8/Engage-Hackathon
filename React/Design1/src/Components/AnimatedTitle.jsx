@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './AnimatedTitle.css';
 
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 const AnimatedTitle = ({ text }) => {
   const animationContainer = useRef(null);
 
@@ -38,6 +40,28 @@ const AnimatedTitle = ({ text }) => {
     function animate(e, i) {
       e.style.opacity = 1;
       e.classList.add('animate');
+
+      // Add letter scrambling effect on hover
+      e.onmouseover = event => {
+        let iteration = 0;
+        let interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.text[index];
+              }
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+          
+          if (iteration >= event.target.dataset.text.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 30);
+      };
     }
 
     splitWords();
