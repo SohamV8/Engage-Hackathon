@@ -8,7 +8,6 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #000; /* Ensure header has a background */
     z-index: 1000;
     box-sizing: border-box;
 }
