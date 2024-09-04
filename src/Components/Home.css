@@ -15,6 +15,10 @@
     gap: 40px; /* Reduce gap for better spacing on smaller screens */
 }
 
+.text-main-home{
+    margin-top: 70px;
+}
+
 h1.main-title, .tagline {
     font-size: 5em; /* Default size for larger screens */
     text-align: center;
