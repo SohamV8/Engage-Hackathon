@@ -22,7 +22,7 @@ function Sponsors() {
       <div className="sponsors-flex">
         
         <div className="sponsorship">
-          <AnimatedTitle text="Gold Sponsors" />
+          <span className='gold'><AnimatedTitle text="Gold Sponsors" /></span>
           <div className="images-sponsors">
           <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
             <img src={devfolio} alt="Gold Sponsor 1" />

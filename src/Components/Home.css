@@ -70,6 +70,9 @@ h1.main-title, .tagline {
     .section {
         gap: 20px; /* Reduce gap further for mobile */
     }
+    .text-main-home{
+        margin-top: 80px;
+    }
 }
 
 /* Glitch Effect Keyframes */
