@@ -10,13 +10,19 @@
     right: 0;
     z-index: 1000;
     box-sizing: border-box;
+backdrop-filter: blur( 3px );
+-webkit-backdrop-filter: blur( 3px );
 }
 
 /* Logo styling */
 .header .logo img, 
 .header .logo svg {
-    height: 60px;
+    height: 50px;
     transition: transform 0.3s ease-in-out;
+}
+
+.header .logo img{
+    height: 100px;
 }
 
 .header .logo:hover img, 

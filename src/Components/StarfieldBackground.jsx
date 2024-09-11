@@ -6,8 +6,8 @@ const StarfieldBackground = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const numStars = 2000;
-    const speed = 1;
+    const numStars = 1800;
+    const speed = 0.8;
     const maxDepth = 1000;
     const starColors = ['#FFFFFF', '#FFDDC1', '#FFC0CB', '#ADD8E6', '#B0E0E6'];
     let stars = [];

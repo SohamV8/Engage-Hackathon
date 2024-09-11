@@ -22,53 +22,56 @@ function Sponsors() {
       <div className="sponsors-flex">
         
         <div className="sponsorship">
-          <span className='gold'><AnimatedTitle text="Gold Sponsors" /></span>
+          <AnimatedTitle text="Gold Sponsors" color="gold" />
           <div className="images-sponsors">
-          <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
-            <img src={devfolio} alt="Gold Sponsor 1" />
-          </a>
-          <a href="https://www.polygon.technology/" target="_blank" rel="noopener noreferrer">
-            <img src={poly} alt="Gold Sponsor 2" />
-          </a>
+            <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
+              <img src={devfolio} alt="Gold Sponsor 1" />
+            </a>
+            <a href="https://www.polygon.technology/" target="_blank" rel="noopener noreferrer">
+              <img src={poly} alt="Gold Sponsor 2" />
+            </a>
+          </div>
         </div>
-        </div>
+
         <div className="sponsorship">
-          <AnimatedTitle text="Silver Sponsors" />
+          <AnimatedTitle text="Silver Sponsors" color="silver" />
           <div className="images-sponsors">
-          <a href="https://www.wolfram.com/" target="_blank" rel="noopener noreferrer">
-            <img src={woldram} alt="Silver Sponsor 1" />
-          </a>
-          <a href="https://beeceptor.com/" target="_blank" rel="noopener noreferrer">
-            <img src={bee} alt="Silver Sponsor 2" />
-          </a>
-          <a href="https://www.stickermule.com/" target="_blank" rel="noopener noreferrer">
-            <img src={sticker} alt="Silver Sponsor 3" />
-          </a>
-          <a href="https://www.echo3d.com/" target="_blank" rel="noopener noreferrer">
-            <img src={echo} alt="Silver Sponsor 4" />
-          </a>
-          <a href="https://rosenfeldmedia.com/" target="_blank" rel="noopener noreferrer">
-            <img src={rosen} alt="Silver Sponsor 5" />
-          </a>
-          <a href="https://replit.com/" target="_blank" rel="noopener noreferrer">
-            <img src={replit} alt="Silver Sponsor 6" />
-          </a>
+            <a href="https://www.wolfram.com/" target="_blank" rel="noopener noreferrer">
+              <img src={woldram} alt="Silver Sponsor 1" />
+            </a>
+            <a href="https://beeceptor.com/" target="_blank" rel="noopener noreferrer">
+              <img src={bee} alt="Silver Sponsor 2" />
+            </a>
+            <a href="https://www.stickermule.com/" target="_blank" rel="noopener noreferrer">
+              <img src={sticker} alt="Silver Sponsor 3" />
+            </a>
+            <a href="https://www.echo3d.com/" target="_blank" rel="noopener noreferrer">
+              <img src={echo} alt="Silver Sponsor 4" />
+            </a>
+            <a href="https://rosenfeldmedia.com/" target="_blank" rel="noopener noreferrer">
+              <img src={rosen} alt="Silver Sponsor 5" />
+            </a>
+            <a href="https://replit.com/" target="_blank" rel="noopener noreferrer">
+              <img src={replit} alt="Silver Sponsor 6" />
+            </a>
+          </div>
         </div>
-        </div>
+
         <div className="sponsorship">
-          <AnimatedTitle text="Community Partners"/>
+          <AnimatedTitle text="Community Partners" color="#7b6000" />
           <div className="images-sponsors">
-          <a href="https://gdsc.community.dev/institute-of-engineering-management-kolkata-india/" target="_blank" rel="noopener noreferrer">
-            <img src={gdsc1} alt="Community Partner 1" />
-          </a>
-          <a href="https://gdg.community.dev/gdg-gurugram/" target="_blank" rel="noopener noreferrer">
-            <img src={gdg} alt="Community Partner 2" />
-          </a>
-          <a href="https://gdsc.community.dev/netaji-subhas-university-of-technology-delhi-india/" target="_blank" rel="noopener noreferrer">
-            <img src={gdscncut} alt="Community Partner 3" />
-          </a>
+            <a href="https://gdsc.community.dev/institute-of-engineering-management-kolkata-india/" target="_blank" rel="noopener noreferrer">
+              <img src={gdsc1} alt="Community Partner 1" />
+            </a>
+            <a href="https://gdg.community.dev/gdg-gurugram/" target="_blank" rel="noopener noreferrer">
+              <img src={gdg} alt="Community Partner 2" />
+            </a>
+            <a href="https://gdsc.community.dev/netaji-subhas-university-of-technology-delhi-india/" target="_blank" rel="noopener noreferrer">
+              <img src={gdscncut} alt="Community Partner 3" />
+            </a>
+          </div>
         </div>
-</div>
+
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import './AnimatedTitle.css';
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-const AnimatedTitle = ({ text }) => {
+const AnimatedTitle = ({ text, color }) => {
   const animationContainer = useRef(null);
 
   useEffect(() => {
@@ -56,7 +56,12 @@ const AnimatedTitle = ({ text }) => {
   }, [text]);
 
   return (
-    <div className="animated-title" ref={animationContainer} aria-label={text}></div>
+    <div 
+      className="animated-title" 
+      ref={animationContainer} 
+      aria-label={text} 
+      style={{ color: color }} // Dynamically set the color
+    ></div>
   );
 };
 
