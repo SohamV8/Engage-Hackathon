@@ -13,40 +13,56 @@
   width: 100%;
   text-shadow: 0 0 7px #1F51FF;
   max-width: 800px;
-margin-top: 50px;
+  margin-top: 50px;
   text-align: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .countdown-item {
-  margin: 0 15px;
+  margin: 10px 15px;
+  flex: 1 1 100px; /* Flex-grow for equal spacing and adaptiveness */
 }
 
 .countdown-value {
   display: block;
-  font-size: 5rem; /* Larger font size for the digital effect */
+  font-size: 4rem; /* Responsive font size */
   margin-bottom: 5px;
 }
 
 .countdown-label {
-  font-size: 1.5rem; /* Slightly larger label font for better readability */
+  font-size: 1.2rem; /* Slightly larger label font for better readability */
   letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+  .countdown {
+    padding: 15px;
+  }
+
+  .countdown-value {
+    font-size: 3.5rem; /* Smaller font size for tablet screens */
+  }
+
+  .countdown-label {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 600px) {
   .countdown {
-    flex-direction: column;
     padding: 10px;
+    flex-direction: row; /* Stack items vertically on small screens */
   }
 
   .countdown-item {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .countdown-value {
-    font-size: 4rem;
+    font-size: 3rem; /* Smaller font size for mobile screens */
   }
 
   .countdown-label {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjust label font size for mobile */
   }
 }

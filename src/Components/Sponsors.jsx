@@ -21,8 +21,8 @@ function Sponsors() {
       <AnimatedTitle text="SPONSORS" />
       <div className="sponsors-flex">
         
-        <div className="sponsorship">
-          <AnimatedTitle text="Gold Sponsors" color="gold" />
+        {/* <div className="sponsorship">
+          <h1 className='gold'>Gold Sponsors</h1>
           <div className="images-sponsors">
             <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
               <img src={devfolio} alt="Gold Sponsor 1" />
@@ -34,7 +34,7 @@ function Sponsors() {
         </div>
 
         <div className="sponsorship">
-          <AnimatedTitle text="Silver Sponsors" color="silver" />
+          <h1 className='silver'>Silver Sponsors</h1>
           <div className="images-sponsors">
             <a href="https://www.wolfram.com/" target="_blank" rel="noopener noreferrer">
               <img src={woldram} alt="Silver Sponsor 1" />
@@ -58,7 +58,7 @@ function Sponsors() {
         </div>
 
         <div className="sponsorship">
-          <AnimatedTitle text="Community Partners" color="#7b6000" />
+          <h1 className='community'>Community Partners</h1>
           <div className="images-sponsors">
             <a href="https://gdsc.community.dev/institute-of-engineering-management-kolkata-india/" target="_blank" rel="noopener noreferrer">
               <img src={gdsc1} alt="Community Partner 1" />
@@ -70,7 +70,10 @@ function Sponsors() {
               <img src={gdscncut} alt="Community Partner 3" />
             </a>
           </div>
-        </div>
+        </div> */}
+
+<h1 className='gold'>COMING SOON</h1>
+
 
       </div>
     </div>

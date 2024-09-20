@@ -63,16 +63,22 @@
 }
 
 /* Sponsor Category Colors */
-span.gold {
+h1.gold {
+    font-size: 45px;
+    font-family: 'Share Tech Mono', monospace;
     color: gold;
 }
 
-.silver {
+h1.silver {
+    font-size: 45px;
+    font-family: 'Share Tech Mono', monospace;
     color: silver;
 }
 
-.community {
-    color: #7b6000; /* Light blue */
+h1.community {
+    font-size: 45px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #7b6000;
 }
 
 /* Responsive Design */

@@ -6,8 +6,8 @@ const StarfieldBackground = () => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const numStars = 1800;
-    const speed = 0.8;
+    let numStars;
+    let speed;
     const maxDepth = 1000;
     const starColors = ['#FFFFFF', '#FFDDC1', '#FFC0CB', '#ADD8E6', '#B0E0E6'];
     let stars = [];
@@ -15,6 +15,18 @@ const StarfieldBackground = () => {
     function setCanvasSize() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+
+      // Adjust number of stars and speed based on screen size
+      if (window.innerWidth < 600) {
+        numStars = 400; // Fewer stars for mobile screens
+        speed = 0.35; // Slower speed for mobile screens
+      } else if (window.innerWidth < 1024) {
+        numStars = 1000; // Moderate number of stars for tablets
+        speed = 0.6; // Moderate speed for tablets
+      } else {
+        numStars = 1800; // Original number of stars for desktops
+        speed = 0.8; // Original speed for desktops
+      }
     }
 
     function getRandomColor() {

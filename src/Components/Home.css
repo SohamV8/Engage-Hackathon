@@ -58,13 +58,13 @@ h1.main-title, .tagline {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     h1.main-title {
-        font-size: 2.5em; /* Adjust size for mobile screens */
+        font-size: 5em; /* Adjust size for mobile screens */
     }
 
     .tagline {
-        font-size: 1em; /* Adjust size for mobile screens */
+        font-size: 2em; /* Adjust size for mobile screens */
     }
     
     .section {
