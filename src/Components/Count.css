@@ -12,7 +12,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for a modern look */
   width: 100%;
   text-shadow: 0 0 7px #1F51FF;
-  max-width: 800px;
+  max-width: 900px;
   margin-top: 50px;
   text-align: center;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -25,7 +25,7 @@
 
 .countdown-value {
   display: block;
-  font-size: 4rem; /* Responsive font size */
+  font-size: 4.5rem; /* Responsive font size */
   margin-bottom: 5px;
 }
 

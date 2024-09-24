@@ -12,26 +12,30 @@ function Header() {
 
   return (
     <header className="header">
-      <a href="App.jsx" className="logo">
-        <img src={ehlogo} alt="logo" />
-      </a>
-
-      <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#about">About Us</a>
-        <a href="#Tracks">Tracks</a>
-        <a href="#Sponsors">Sponsors</a>
-        <a href="#FAQ">FAQ</a>
-      </nav>
-
-      <a href="https://momentum.ncuindia.edu/" target="_blank" rel="noopener noreferrer" className="logo">
-        <img src={MOM_LOGO} alt="momentum" />
-      </a>
+      <div className="logo-container">
+        <div className="logo">
+          <img src={ehlogo} alt="logo" />
+        </div>
+      </div>
 
       <div className="menu-toggle" onClick={toggleMenu}>
         <span className={isMenuOpen ? 'open' : ''}></span>
         <span className={isMenuOpen ? 'open' : ''}></span>
         <span className={isMenuOpen ? 'open' : ''}></span>
       </div>
+
+      <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+        <a href="#about">About Us</a>
+        <a href="#Tracks">Tracks</a>
+        <a href="#Sponsors">Sponsors</a>
+        <a href="#FAQ">FAQ</a>
+        <div className="menu-logo">
+          <img src={ehlogo} alt="logo" />
+        </div>
+        <a href="https://momentum.ncuindia.edu/" target="_blank" rel="noopener noreferrer">
+          <img src={MOM_LOGO} alt="momentum" className="momentum-logo" />
+        </a>
+      </nav>
     </header>
   );
 }
