@@ -3,7 +3,7 @@ import './Home.css';
 import Countdown from './Countdown';
 
 const Home = () => {
-  const targetDate = 'Dec 31, 2024 23:59:59';
+  const targetDate = 'Oct 21, 2024 23:59:59';
   
   return (
     <div className="home">
